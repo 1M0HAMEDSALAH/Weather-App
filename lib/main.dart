@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:untitled2/bloc/weather_bloc_bloc.dart';
+import 'package:untitled2/common/indicator.dart';
 import 'package:untitled2/screens/my_home_screen.dart';
 
 void main() {
@@ -31,9 +32,9 @@ class MyApp extends StatelessWidget {
                 child: const MyHomeScreen(),
               );
             } else {
-              return const Scaffold(
+              return Scaffold(
                 body: Center(
-                  child: CircularProgressIndicator(),
+                  child: MyHomeScreen(),
                 ),
               );
             }
